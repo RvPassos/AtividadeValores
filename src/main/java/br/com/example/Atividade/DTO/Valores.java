@@ -14,6 +14,7 @@ public class Valores {
         return ListValores;
     }
 
+
     public void setListValores(List<Double> listValores) {
         ListValores = listValores;
     }
