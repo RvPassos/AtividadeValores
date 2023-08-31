@@ -51,7 +51,7 @@ public class ValoresService {
         return desvioPadrao;
     }
 
-    public int quantValores(List<Double> listValores){
+    public Integer quantValores(List<Double> listValores){
         return listValores.size();
     }
 
