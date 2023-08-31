@@ -50,5 +50,33 @@ public class TesteCalculadora {
         Assert.assertEquals(number, valoresService.mediana(listNum));
     }
 
+    @Test
+    public void testSomaValores(){
+        ValoresService valoresService = new ValoresService();
 
+        Double[] num = {1.0, 2.0, 3.0, 4.0, 5.0};
+        List<Double> listNum = Arrays.asList(num);
+        Double number = 15.0;
+        Assert.assertEquals(number, valoresService.somaValores(listNum));
+    }
+
+    @Test
+    public void testValorMax(){
+        ValoresService valoresService = new ValoresService();
+
+        Double[] num = {1.0, 2.0, 3.0, 4.0, 5.0};
+        List<Double> listNum = Arrays.asList(num);
+        Double number = 5.0;
+        Assert.assertEquals(number, valoresService.max(listNum));
+    }
+
+    @Test
+    public void testValorMin(){
+        ValoresService valoresService = new ValoresService();
+
+        Double[] num = {1.0, 2.0, 3.0, 4.0, 5.0};
+        List<Double> listNum = Arrays.asList(num);
+        Double number = 1.0;
+        Assert.assertEquals(number, valoresService.min(listNum));
+    }
 }

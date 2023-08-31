@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -68,5 +69,26 @@ public class ValoresService {
         } else {
             return listValores.get(tamanho/2);
         }
+    }
+
+    public Double min(List<Double> listValores){
+        Collections.sort(listValores);
+        return listValores.get(0);
+    }
+
+    public Double max(List<Double> listValores){
+        Collections.sort(listValores);
+
+        return listValores.get(listValores.size() - 1);
+    }
+
+    public Double somaValores(List<Double> listValores){
+        Double soma = 0.0;
+
+        for(int i =0; i < listValores.size(); i++){
+            soma += listValores.get(i);
+        }
+
+        return soma;
     }
 }
